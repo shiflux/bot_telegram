@@ -21,18 +21,25 @@ for x in range(len(data_images)):
 
 def inline_caps(bot, update):
     query = update.inline_query.query
-    if not query:
-        return
-    queries = query.split()
     results = list()
-    matching = [s for s in images_dict if all(item in s for item in queries)]
-    for x in range(len(matching)):
-        results.append(
-            InlineQueryResultPhoto(
-                id=matching[x],
-                photo_url=images_dict[matching[x]][0],
-                thumb_url=images_dict[matching[x]][1])
-        )
+    if not query:
+        for s in images_dict:
+            results.append(
+                InlineQueryResultPhoto(
+                    id=s,
+                    photo_url=images_dict[s][0],
+                    thumb_url=images_dict[s][1])
+            )
+    else:
+        queries = query.split()
+        matching = [s for s in images_dict if all(item in s for item in queries)]
+        for x in range(len(matching)):
+            results.append(
+                InlineQueryResultPhoto(
+                    id=matching[x],
+                    photo_url=images_dict[matching[x]][0],
+                    thumb_url=images_dict[matching[x]][1])
+            )
 
     bot.answerInlineQuery(update.inline_query.id, results)
 
