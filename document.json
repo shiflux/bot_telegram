@@ -1,0 +1,15 @@
+{
+  "images": [
+    {
+      "name": "cane",
+      "link": "http://digilander.libero.it/principe69_9/cane.jpg",
+      "thumbail": "http://digilander.libero.it/principe69_9/cane.jpg"
+    },
+    {
+      "name": "computer",
+      "link": "https://www.nrdc.org/sites/default/files/import/switchboard/blogs/pdelforge/assets_c/2012/09/Desktop_PC_web_small-thumb-448x336-8008.jpg",
+      "thumbail": "https://www.nrdc.org/sites/default/files/import/switchboard/blogs/pdelforge/assets_c/2012/09/Desktop_PC_web_small-thumb-448x336-8008.jpg"
+    }
+  ],
+  "sounds": {}
+}
