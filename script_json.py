@@ -11,5 +11,5 @@ if os.path.isfile("sounds.json"):
     with open("sounds.json") as infile:
         sounds = json.load(infile)
 
-with open('bot_setup.json', 'w') as outfile:
+with open('json/bot_setup.json', 'w') as outfile:
     json.dump({"images":images, "sounds":sounds}, outfile, indent=4)

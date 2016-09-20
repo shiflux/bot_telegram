@@ -12,7 +12,7 @@ def start(bot, update):
 start_handler = CommandHandler('start', start)
 b.add_command(start_handler)
 
-data_images = get_from_json("http://31.14.139.243/bot_setup.json", "images")
+data_images = get_from_json("http://31.14.139.243/json/bot_setup.json", "images")
 images_dict = {}
 for x in range(len(data_images)):
     images_dict[data_images[x]["name"]] = (data_images[x]["link"],data_images[x]["thumbnail"])
